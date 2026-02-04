@@ -13,10 +13,10 @@
 
 bl_info = {
     "name" : "BakeLab",
-    "author" : "Shahzod Boyxonov (specoolar@gmail.com)",
+    "author" : "Yi Lu (hi@octz.net)",
     "description" : "Bake textures easily",
-    "blender" : (2, 81, 0),
-    "version" : (2, 0, 1),
+    "blender" : (5, 0, 0),
+    "version" : (2, 1, 0),
     "location" : "View3D > Properties > BakeLab",
     "category" : "Baking"
 }
@@ -63,7 +63,9 @@ def updateAdaptiveImageMaxSize(self, context):
 
 def updateSavePath(self, context):
     if bpy.data.is_saved:
-        self.save_path = bpy.path.abspath(self.save_path)
+        new_path = bpy.path.abspath(self.save_path)
+        if new_path != self.save_path:
+            self.save_path = new_path
 
 class BakeLabProperties(PropertyGroup):
     bake_state: EnumProperty(
