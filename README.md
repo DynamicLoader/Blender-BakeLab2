@@ -1,4 +1,7 @@
+> A fork of [specoolar/Blender-BakeLab2](https://github.com/specoolar/Blender-BakeLab2) with bugfix.
+
 # Blender-BakeLab2
+
 ![Thumbnail](bakelab_thumbnail_text_logo_small.jpg)
 BakeLab - A blender addon for baking images.<br>
 Compatible with Blender 2.81 or higher.<br>
